@@ -29,6 +29,9 @@ namespace AutoAnki
             ScreenCaptureAPI.Cleanup();
             UIInit();
             StateMachineInit();
+
+            // TODO DELETE
+            var latest = GithubAPI.GetLatestRelease();
         }
 
 
