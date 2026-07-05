@@ -29,9 +29,39 @@ namespace AutoAnki
             ScreenCaptureAPI.Cleanup();
             UIInit();
             StateMachineInit();
+        }
 
-            // TODO DELETE
-            var latest = GithubAPI.GetLatestRelease();
+        protected override async void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            await CheckForUpdate();            
+        }
+
+        private async Task CheckForUpdate()
+        {
+            // check latest app version on launch
+            if (await GithubAPI.IsUpdateAvailableByTimestampAsync())
+            {
+                var latest = await GithubAPI.GetLatestReleaseAsync();
+                var resp = MessageBox.Show($"New version of AutoAnki is available, update to latest?\n\n{latest.Body}", "Update Available", MessageBoxButtons.YesNo);
+                if (resp == DialogResult.Yes)
+                {
+                    // said yes, download update
+                    var zip = await GithubAPI.DownloadLatestAssetAsync();
+
+                    // after download, launch updater exe
+                    string mainExePath = Process.GetCurrentProcess().MainModule!.FileName;
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = "Updater.exe",
+                        Arguments = $"\"{GithubAPI.UPDATE_ZIP_PATH}\" \"{mainExePath}\"",
+                        UseShellExecute = false
+                    });
+
+                    // terminate self while update occurs
+                    Application.Exit();
+                }
+            }
         }
 
 
