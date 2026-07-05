@@ -47,7 +47,7 @@ namespace AutoAnki
                 if (resp == DialogResult.Yes)
                 {
                     // said yes, download update
-                    var zip = await GithubAPI.DownloadLatestAssetAsync();
+                    await GithubAPI.DownloadLatestAssetAsync();
 
                     // after download, launch updater exe
                     string mainExePath = Process.GetCurrentProcess().MainModule!.FileName;

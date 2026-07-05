@@ -20,8 +20,6 @@ namespace AutoAnki.Core.API
 
         public static async Task<bool> IsUpdateAvailableByTimestampAsync()
         {
-            return true;
-
             var latest = await GetLatestReleaseAsync();
 
             DateTimeOffset releaseTime = latest.CreatedAt;
@@ -35,7 +33,9 @@ namespace AutoAnki.Core.API
             var latest = await GetLatestReleaseAsync();
 
             // pick the ZIP asset
-            var asset = latest.Assets.First(a => a.Name.EndsWith(".zip"));
+            var asset = latest.Assets
+            .First(a => a.Name.EndsWith(".zip") &&
+                !a.Name.Contains("source", StringComparison.OrdinalIgnoreCase));
 
             using var http = new HttpClient();
             var bytes = await http.GetByteArrayAsync(asset.BrowserDownloadUrl);
