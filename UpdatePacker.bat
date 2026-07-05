@@ -8,7 +8,7 @@ REM Root-relative path to your build output
 set SOURCE=AutoAnki\bin\x64\debug\net8.0-windows
 
 REM Output zip name
-set OUTPUT=update.zip
+set OUTPUT=AutoAnki.zip
 
 REM Verify source exists
 if not exist "%SOURCE%" (
