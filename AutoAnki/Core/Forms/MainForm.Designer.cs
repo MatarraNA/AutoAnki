@@ -100,7 +100,7 @@
             AutoAnkiForm.SmartBounds = true;
             AutoAnkiForm.StartPosition = FormStartPosition.CenterScreen;
             AutoAnkiForm.TabIndex = 0;
-            AutoAnkiForm.Text = " AutoAnki";
+            AutoAnkiForm.Text = " AnkiInsert";
             AutoAnkiForm.TransparencyKey = Color.Purple;
             AutoAnkiForm.Transparent = false;
             // 
@@ -600,7 +600,7 @@
             MinimumSize = new Size(261, 61);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "AutoAnki";
+            Text = "AnkiInsert";
             TransparencyKey = Color.Purple;
             AutoAnkiForm.ResumeLayout(false);
             crownGroupBox2.ResumeLayout(false);

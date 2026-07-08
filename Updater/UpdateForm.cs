@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Updater
 {
-    public partial class UpdateForm : Form
+    public partial class Updater : Form
     {
-        public UpdateForm()
+        public Updater()
         {
             InitializeComponent();
         }

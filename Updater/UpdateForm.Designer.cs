@@ -1,6 +1,6 @@
 ﻿namespace Updater
 {
-    partial class UpdateForm
+    partial class Updater
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             updateProgressBar.Size = new Size(260, 23);
             updateProgressBar.TabIndex = 0;
             // 
-            // UpdateForm
+            // Updater
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -46,8 +46,8 @@
             ClientSize = new Size(284, 47);
             Controls.Add(updateProgressBar);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "UpdateForm";
-            Text = "UpdateForm";
+            Name = "Updater";
+            Text = "Updater";
             Load += UpdateForm_Load;
             ResumeLayout(false);
         }

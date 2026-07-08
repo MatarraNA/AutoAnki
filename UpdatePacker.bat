@@ -5,10 +5,10 @@ REM Always run from the script's directory
 cd /d "%~dp0"
 
 REM Root-relative path to your build output
-set SOURCE=AutoAnki\bin\x64\debug\net8.0-windows
+set SOURCE=AutoAnki\bin\x64\release\net8.0-windows
 
 REM Output zip name
-set OUTPUT=AutoAnki.zip
+set OUTPUT=AnkiInsert.zip
 
 REM Verify source exists
 if not exist "%SOURCE%" (

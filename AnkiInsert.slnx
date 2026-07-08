@@ -3,7 +3,7 @@
     <Platform Name="Any CPU" />
     <Platform Name="x64" />
   </Configurations>
-  <Project Path="AutoAnki/AutoAnki.csproj">
+  <Project Path="AutoAnki/AnkiInsert.csproj">
     <Platform Solution="*|x64" Project="x64" />
   </Project>
   <Project Path="Updater/Updater.csproj" Id="cdeceee2-7a33-4351-a994-a1258e1476d9" />

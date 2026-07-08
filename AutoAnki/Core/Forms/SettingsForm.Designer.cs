@@ -166,7 +166,7 @@
             Name = "SettingsForm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "themeForm1";
+            Text = "Settings";
             TransparencyKey = Color.Purple;
             AutoAnkiForm.ResumeLayout(false);
             ResumeLayout(false);

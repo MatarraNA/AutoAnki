@@ -43,7 +43,7 @@ namespace AutoAnki
             if (await GithubAPI.IsUpdateAvailableByTimestampAsync())
             {
                 var latest = await GithubAPI.GetLatestReleaseAsync();
-                var resp = MessageBox.Show($"New version of AutoAnki is available, update to latest?\n\n{latest.Body}", "Update Available", MessageBoxButtons.YesNo);
+                var resp = MessageBox.Show($"New version of AnkiInsert is available, update to latest?\n\n{latest.Body}", "Update Available", MessageBoxButtons.YesNo);
                 if (resp == DialogResult.Yes)
                 {
                     // said yes, download update

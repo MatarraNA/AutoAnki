@@ -15,7 +15,7 @@ namespace AutoAnki.Core.API
 
         public static async Task<Release> GetLatestReleaseAsync()
         {
-            return await _client.Repository.Release.GetLatest("MatarraNA", "AutoAnki");
+            return await _client.Repository.Release.GetLatest("MatarraNA", "AnkiInsert");
         }
 
         public static async Task<bool> IsUpdateAvailableByTimestampAsync()
